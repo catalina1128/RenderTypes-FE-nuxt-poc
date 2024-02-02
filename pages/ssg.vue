@@ -1,23 +1,26 @@
 <template>
     <div>
-      <div class="user">
-        <ProfileCard :user="userInfo"/>
+      <div class="user-list">
+        <div v-for="user in data" :key="user.id" class="user-list__card">
+          <LazyProfileCard :user="user" />
+        </div>
       </div>
+      <button @click="doSomething">
+        Click me
+      </button>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const route = useRoute()
 const config = useRuntimeConfig()
 const baseUrl = config.public.baseUrl
-const users = ref([])
 
-users.value = await useFetch(`${baseUrl}/people`)
+const { data } = await useFetch(`${baseUrl}/people`)
 
-const userInfo = ref({})
-userInfo.value = users.value.data.find(user => user.id == route.params.id)
+function doSomething(): void
+{
+    console.log('It\'s working')
+}
 
 </script>
 
@@ -29,7 +32,7 @@ userInfo.value = users.value.data.find(user => user.id == route.params.id)
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
   &__card {
     display: inline-block;
     margin: 10px;

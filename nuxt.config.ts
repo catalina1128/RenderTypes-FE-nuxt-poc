@@ -1,11 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.BASE_URL,
+    }
+  },
   devtools: { enabled: true },
   routeRules: {
     '/': { ssr: true },
-    '/aboutcsr': { ssr: false },
-    '/aboutssr': { ssr: true },
-    '/aboutssr2': { ssr: true },
+    '/csr': { ssr: false },
+    '/ssr': { ssr: true },
+    '/ssr2': { ssr: true },
+    '/ssg': { prerender: true },
+    '/isr': { swr: 3600 },
   },
   modules: [
     '@pinia/nuxt',

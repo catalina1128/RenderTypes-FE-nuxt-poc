@@ -22,16 +22,24 @@ const navigation: NavigationRoutes = [
     title: "Home",
   },
   {
-    path: "/aboutcsr",
-    title: "AboutCSR",
+    path: "/csr",
+    title: "CSR",
   },
   {
-    path: "/aboutssr",
-    title: "AbourSSR",
+    path: "/ssr",
+    title: "SSR",
   },
   {
-    path: "/aboutssr2",
-    title: "AbourSSR2",
+    path: "/ssg",
+    title: "SSG",
+  },
+  {
+    path: "/isr",
+    title: "ISR",
+  },
+  {
+    path: "/ssr2",
+    title: "SSR2",
   },
 ];
 </script>

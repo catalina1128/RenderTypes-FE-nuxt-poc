@@ -12,7 +12,10 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useFetch('/api/people')
+const config = useRuntimeConfig()
+const baseUrl = config.public.baseUrl
+
+const { data } = await useFetch(`${baseUrl}/people`)
 
 function doSomething(): void
 {
