@@ -12,7 +12,13 @@ export default defineNuxtConfig({
     '/ssr': { ssr: true },
     '/ssr2': { ssr: true },
     '/ssg': { prerender: true },
-    '/isr': { swr: 3600 },
+    '/isr': { isr: 60 },
+  },
+  nitro: {
+    prerender: {
+      routes: ['/ssg'],
+      ignore: ['/csr', '/ssr', '/ssr2']
+    }
   },
   modules: [
     '@pinia/nuxt',
