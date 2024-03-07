@@ -38,6 +38,10 @@ const navigation: NavigationRoutes = [
     title: "ISR",
   },
   {
+    path: "/swr",
+    title: "SWR",
+  },
+  {
     path: "/ssr2",
     title: "SSR2",
   },
