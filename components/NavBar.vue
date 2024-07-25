@@ -42,8 +42,8 @@ const navigation: NavigationRoutes = [
     title: "SWR",
   },
   {
-    path: "/ssr2",
-    title: "SSR2",
+    path: "/testStore",
+    title: "Test Store",
   },
 ];
 </script>

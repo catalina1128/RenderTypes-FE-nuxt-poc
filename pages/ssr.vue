@@ -7,9 +7,6 @@
           </NuxtLink>
         </div>
       </div>
-      <button @click="doSomething">
-        Click me
-      </button>
     </div>
 </template>
 
@@ -18,11 +15,6 @@ const config = useRuntimeConfig()
 const baseUrl = config.public.baseUrl
 
 const { data } = await useFetch(`${baseUrl}/people`)
-
-function doSomething(): void
-{
-    console.log('It\'s working')
-}
 
 </script>
 

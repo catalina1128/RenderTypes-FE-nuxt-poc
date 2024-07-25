@@ -1,5 +1,5 @@
 import { setActivePinia, createPinia } from 'pinia'
-import { useCounterStore } from '@/store/helloStore'
+import { useCounterStore } from '@/store/countStore'
 
 describe('Counter Store', () => {
 

@@ -14,17 +14,13 @@
 </template>
 
 <script setup lang="ts">
-import { useCounterStore } from '../store/helloStore'
+import { useCounterStore } from '../store/countStore'
 
-// const { data } = await useFetch('/api/about')
 const counterStore = useCounterStore()
 
 function doSomething(): void
 {
-  console.log(null ?? 'Hello')
   counterStore.increment()
-  console.log(counterStore.count)
-  console.log('It\'s working')
 }
 
 useHead({
